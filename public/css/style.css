@@ -13,20 +13,32 @@ body {
   background-color: #fdfdfd;
 }
 
+header {
+  background-color: cyan;
+  min-height: 9vh;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
 header h1 {
   font-family: "Audiowide", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
+header i {
+  font-size: 20px;
+}
+
+/* Produtos */
 .produtos-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-/* From Uiverse.io by alexmaracinaru */
 .card {
-  max-width: 166px;
+  max-width: 20rem;
   height: auto;
   background: #e0dfdf;
   padding: 0.4em;
@@ -73,4 +85,89 @@ header h1 {
   color: gray;
   font-weight: 400;
   font-size: 11px;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1025px) {
+  * {
+    font-size: 10px;
+  }
+
+  body {
+    background-color: red;
+  }
+
+  /* Header */
+  header {
+    min-height: 15vh;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  * {
+    font-size: 10px;
+  }
+  body {
+    background-color: blue;
+  }
+
+  /* Header */
+  header {
+    min-height: 12vh;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+  * {
+    font-size: 10px;
+  }
+  body {
+    background-color: green;
+  }
+
+  /* Header */
+  header {
+    min-height: 9vh;
+  }
+
+  header h1 {
+    font-size: 20px;
+    word-break: break-word;
+  }
+  header div {
+    min-width: 75%;
+    height: 100%;
+  }
+
+  .search {
+    height: 100%;
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #search-bar {
+    margin-right: 5px;
+    width: 80%;
+    min-height: 100%;
+    border-radius: 13px;
+    border: solid #e0dfdf 1px;
+  }
+
+  .search-button {
+    background: none;
+    /* border: none; */
+  }
+
+  .search-button i {
+    height: 50%;
+  }
+
+  /* Grid de produtos */
+  .produtos-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
