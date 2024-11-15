@@ -87,42 +87,12 @@ header i {
   font-size: 11px;
 }
 
-/* Desktop */
-@media only screen and (min-width: 1025px) {
-  * {
-    font-size: 10px;
-  }
-
-  body {
-    background-color: red;
-  }
-
-  /* Header */
-  header {
-    min-height: 15vh;
-  }
-}
-
-/* Tablets */
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
-  * {
-    font-size: 10px;
-  }
-  body {
-    background-color: blue;
-  }
-
-  /* Header */
-  header {
-    min-height: 12vh;
-  }
-}
-
 /* Mobile */
 @media only screen and (max-width: 480px) {
   * {
     font-size: 10px;
   }
+
   body {
     background-color: green;
   }
@@ -133,9 +103,10 @@ header i {
   }
 
   header h1 {
-    font-size: 20px;
+    font-size: 22px;
     word-break: break-word;
   }
+
   header div {
     min-width: 75%;
     height: 100%;
@@ -169,5 +140,36 @@ header i {
   .produtos-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1025px) {
+  * {
+    font-size: 10px;
+  }
+
+  body {
+    background-color: red;
+  }
+
+  /* Header */
+  header {
+    min-height: 15vh;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  * {
+    font-size: 10px;
+  }
+  body {
+    background-color: blue;
+  }
+
+  /* Header */
+  header {
+    min-height: 12vh;
   }
 }

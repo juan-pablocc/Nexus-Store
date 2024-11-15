@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Oxygen:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  border: solid 1px red;
+  background-color: #fdfdfd;
+  height: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  background-color: aqua;
+  max-height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 7px;
+}
+
+header h1 {
+  max-width: 30%;
+  font-family: "Audiowide", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+}
+
+header .icons,
+.search {
+  display: flex;
+  justify-content: end;
+}
+
+header .nav-content {
+  /* border: solid 1px green; */
+  width: 70%;
+}
+
+header .shop-cart,
+.favs {
+  color: #000;
+  margin-left: 10px;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+header .search {
+  min-height: 1.7rem;
+}
+
+header .search input {
+  min-width: 90%;
+  border-radius: 25px;
+}
+
+header .search button {
+  border-radius: 50%;
+  height: 1.7rem;
+  width: 1.7rem;
+  font-size: 17px;
+  border: none;
+  background: none;
+}
+/* MAIN */
+main {
+  display: grid;
+}
+
+footer {
+  max-height: 15vh;
+}
+
+/* Produtos */
+.produtos-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  width: 200px;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  padding: 7px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.image img {
+  max-width: 100%;
+  max-height: 100%;
+  mix-blend-mode: darken;
+}
+
+.icon {
+  max-width: 27px;
+  max-height: 27px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #e0e0e0;
+  color: #ff0000;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: none;
+}
+
+.details {
+  margin-top: 10px;
+  color: #333;
+  font-size: 14px;
+}
+
+.details p {
+  margin: 5px 0;
+}

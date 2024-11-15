@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../public/css/main.css" />
     <!-- Ícones -->
     <link
       rel="stylesheet"
@@ -18,35 +18,81 @@
   <body>
     <header>
       <h1>NEXUS STORE</h1>
-      <div>
+      <div class="nav-content">
+        <div class="icons">
+          <a href="#" class="shop-cart"
+            ><i class="fi fi-rr-shopping-cart"></i
+          ></a>
+          <a href="#" class="favs"><i class="fi fi-rr-heart"></i></a>
+        </div>
+
         <div class="search">
           <input type="text" id="search-bar" value="" />
           <button class="search-button"><i class="fi fi-rr-search"></i></button>
         </div>
-        <!-- <a href="#" class="shop-cart"><i class="fi fi-rr-shopping-cart"></i></a> -->
       </div>
     </header>
+
     <main class="produtos-content">
+      <div class="card">
+        <div class="image">
+          <img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+            alt=""
+          />
+          <button class="icon"><i class="fi fi-rr-heart"></i></button>
+        </div>
+        <div class="details">
+          <p>NOME DO PRODUTO</p>
+          <p>AVALIAÇÃO</p>
+          <p>PREÇO</p>
+        </div>
+      </div>
+
+      <!-- <div class="card">
+        <div class="card-imageDiv">
+          <button href="#" class="favs"><i class="fi fi-rr-heart"></i></button>
+
+          <img
+            class="card-image"
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+          />
+        </div>
+        <h2 class="title" translate="yes">
+          Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+        </h2>
+        <div class="sales">
+          <p class="rate">3.9</p>
+          <h4| class="count">120</h4>
+        </div>
+      </div> -->
+
       <!-- <div class="produto">
         <img
           src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
           alt=""
           class="img-produto"
         />
-        <h2 class="nome">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h2>
+        <h2 class="nome">
+          Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+        </h2>
         <p class="descricao">
-          Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15
-          inches) in the padded sleeve, your everyday
+          Your perfect pack for everyday use and walks in the forest. Stash your
+          laptop (up to 15 inches) in the padded sleeve, your everyday
         </p>
         <div>
           <p class="valor">109.95</p>
-          <p><span class="vendidos">120</span><span class="avaliacao">3.9</span></p>
+          <p>
+            <span class="vendidos">120</span><span class="avaliacao">3.9</span>
+          </p>
         </div>
       </div> -->
     </main>
+
     <footer>
-      <!-- <p>Entre em contato conosco:</p> -->
+      <p>Entre em contato conosco:</p>
     </footer>
+
     <script src="/js/produtos.js"></script>
   </body>
 </html>
