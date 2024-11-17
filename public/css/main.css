@@ -11,7 +11,9 @@
 
 body {
   border: solid 1px red;
-  background-color: #fdfdfd;
+  /* background-color: #fdfdfd; */
+  background-color: #042940;
+
   height: auto;
   display: flex;
   text-align: center;
@@ -42,16 +44,23 @@ header .icons,
 }
 
 header .nav-content {
-  /* border: solid 1px green; */
   width: 70%;
 }
 
-header .shop-cart,
-.favs {
+header .shop-cart {
   color: #000;
   margin-left: 10px;
   font-size: 22px;
   text-decoration: none;
+}
+
+.favs .container-favs {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  fill: #ffeb49;
+  margin-left: 10px;
 }
 
 header .search {
@@ -84,10 +93,12 @@ footer {
 .produtos-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 10px;
 }
 
 .card {
-  width: 200px;
+  max-width: 200px;
+  max-height: 300px;
   background-color: #e0e0e0;
   padding: 10px;
   border-radius: 10px;
@@ -116,26 +127,55 @@ footer {
   mix-blend-mode: darken;
 }
 
-.icon {
-  max-width: 27px;
-  max-height: 27px;
+.container input,
+.container-favs input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  max-width: 26px;
+  max-height: 26px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
   position: absolute;
   top: 5px;
   right: 5px;
   background-color: #e0e0e0;
-  color: #ff0000;
-  padding: 5px;
-  font-size: 20px;
-  border-radius: 50%;
-  border: none;
+  border-radius: 25px;
+}
+
+.container svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: auto;
+  transition: all 0.3s;
+  fill: #666;
+}
+
+.container svg:hover,
+.container-favs:hover {
+  transform: scale(1.1);
+}
+
+.container input:checked ~ svg {
+  fill: #ffeb49;
 }
 
 .details {
-  margin-top: 10px;
-  color: #333;
-  font-size: 14px;
+  border: solid 1px orange;
+  margin-top: 7px;
 }
 
-.details p {
-  margin: 5px 0;
+.details .title {
+  color: #000;
+  font-weight: 400;
+  text-align: left;
 }
