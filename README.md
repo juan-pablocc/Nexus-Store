@@ -37,7 +37,7 @@ Este repositório contém apenas a **parte frontend** do projeto, que foi constr
 ### Clone o repositório:
 
    ```bash
-   https://github.com/juan-pablocc/Nexus-Store.git
+   git clone https://github.com/juan-pablocc/Nexus-Store.git
   ```
 ---
 
