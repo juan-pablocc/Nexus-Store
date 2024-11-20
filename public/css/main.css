@@ -96,7 +96,31 @@ main {
 }
 
 footer {
-  max-height: 15vh;
+  background-color: #e0e0e0;
+  max-height: 17vh;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.6rem;
+}
+
+address {
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+address > * {
+  display: inline-block;
+  margin: 0.3rem;
+  text-align: left;
+}
+
+footer h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+footer > p {
+  font-weight: bold;
 }
 
 /* Produtos */
