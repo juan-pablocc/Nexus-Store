@@ -128,7 +128,7 @@ footer > p {
 }
 
 .card {
-  max-width: 210px;
+  max-width: auto;
   max-height: 310px;
   background-color: #e0e0e0;
   padding: 0.6rem;
