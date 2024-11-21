@@ -90,10 +90,7 @@ header .search button {
   background: none;
 }
 
-/* MAIN */
-main {
-  display: grid;
-}
+/* Footer */
 
 footer {
   background-color: #e0e0e0;
@@ -123,11 +120,11 @@ footer > p {
   font-weight: bold;
 }
 
-/* Produtos */
+/* MAIN - Produtos */
 .produtos-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 6px;
+  padding: 7px;
 }
 
 .card {
@@ -135,7 +132,7 @@ footer > p {
   max-height: 310px;
   background-color: #e0e0e0;
   padding: 0.6rem;
-  margin: 5px 2px;
+  margin: 5px 3px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: Arial, sans-serif;
