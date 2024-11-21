@@ -3,7 +3,7 @@
 
 ## Descrição
 
-Este é um projeto de **loja de e-commerce**, desenvolvido para ser a interface de um site de vendas online. A aplicação permite que os usuários visualizem os produtos, adicionem itens ao carrinho e simulem o processo de compra. 
+Este é um projeto de **loja de e-commerce**, desenvolvido para ser a interface de um site de vendas online. A aplicação permite que os usuários visualizem os produtos, adicionem itens ao carrinho e simulem o processo de compra.<a href="https://juan-pablocc.github.io/Nexus-Store">(Clique aqui para ver)</a>
 
 Este repositório contém apenas a **parte frontend** do projeto, que foi construída utilizando **HTML**, **CSS** e **JavaScript**. Ele foi projetado para ser uma plataforma simples e visualmente atraente, com foco na experiência do usuário.
 
