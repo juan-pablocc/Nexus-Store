@@ -126,7 +126,7 @@ footer > p {
   display: grid;
   grid-template-columns: repeat(6, minmax(150px, 1fr));
   padding: 10px;
-  width: 100%;
+  place-items: center;
 }
 
 .card {
