@@ -125,19 +125,19 @@ footer > p {
 .produtos-content {
   display: grid;
   grid-template-columns: repeat(6, minmax(150px, 1fr));
-  padding: 7px;
+  padding: 10px;
   width: 100%;
 }
 
 .card {
   max-width: 97%;
   height: 100%;
-  width: 100%;
+  width: 150px;
   max-height: 310px;
   background-color: #e0e0e0;
   padding: 0.6rem;
-  margin: 4px 0;
-  gap: 10px;
+  margin: 7px 0;
+  gap: 12px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: Arial, sans-serif;
