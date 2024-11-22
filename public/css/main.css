@@ -131,7 +131,7 @@ footer > p {
 }
 
 .card {
-  max-width: 100%;
+  max-width: 150px;
   height: 100%;
   max-height: 310px;
   background-color: #e0e0e0;
