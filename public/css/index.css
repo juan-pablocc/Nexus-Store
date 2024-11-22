@@ -1,273 +1,84 @@
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Oxygen:wght@300;400;700&display=swap");
+:root {
+  /* Cores principais */
+  --primary: #2b2d42; /* Azul escuro/índigo - cor principal da marca */
+  --secondary: #4e5de3; /* Azul vibrante - cor de destaque */
 
-/* Reset e estilos base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Oxygen", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+  /* Cores de fundo */
+  --bg-primary: #f8f9fa; /* Branco off-white - fundo principal */
+  --bg-secondary: #edf2f4; /* Cinza muito claro - fundo secundário */
+  --bg-card: #ffffff; /* Branco puro - fundo dos cards */
+
+  /* Cores de texto */
+  --text-primary: #2b2d42; /* Azul escuro - texto principal */
+  --text-secondary: #5c6c7c; /* Cinza azulado - texto secundário */
+  --text-light: #ffffff; /* Branco - texto sobre fundos escuros */
+
+  /* Cores de ação */
+  --accent: #4e5de3; /* Azul vibrante - botões e links */
+  --accent-hover: #3f4dcc; /* Azul mais escuro - hover */
+  --success: #4caf50; /* Verde - mensagens de sucesso */
+  --warning: #ffc107; /* Amarelo - avisos */
+  --error: #dc3545; /* Vermelho - erros */
+
+  /* Cores de elementos específicos */
+  --header-bg: #2b2d42; /* Fundo do header */
+  --footer-bg: #d2d2d2; /* Fundo do footer */
+  --card-shadow: rgba(43, 45, 66, 0.1); /* Sombra dos cards */
+  --rating-star: #ffc107; /* Estrelas de avaliação */
+  --cart-badge: #dc3545; /* Indicador do carrinho */
+  --search-border: #dde2e5; /* Borda da busca */
 }
 
+/* Exemplo de aplicação básica */
 body {
-  background-color: #fdfdfd;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
-/* HEADER */
 header {
-  background-color: aqua;
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  padding: 0.7rem;
-  justify-content: space-between;
-}
-
-header h1 {
-  width: 30%;
-  font-family: "Audiowide", sans-serif;
-  font-weight: 500;
-  font-size: 1.5625rem;
-}
-
-header .icons,
-.search {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-header .nav-content {
-  width: 70%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-header .shop-cart {
-  color: #000;
-  font-size: 1.375rem;
-  text-decoration: none;
+  background-color: var(--header-bg);
+  color: var(--text-light);
 }
 
 .favs .container-favs {
-  position: relative;
-  cursor: pointer;
-  user-select: none;
-  fill: #ffeb49;
-}
-
-.container-favs svg {
-  width: 37px;
-  height: 37px;
-}
-
-.container-favs input[type="checkbox"] {
-  display: none;
-}
-
-header .search {
-  min-height: 1.7rem;
-}
-
-header .search input {
-  min-width: 90%;
-  border-radius: 25px;
-  padding: 0.3rem 0.5rem;
-  border: 1px solid #ddd;
-}
-
-header .search button {
-  border-radius: 50%;
-  height: 1.7rem;
-  width: 1.7rem;
-  font-size: 1.0625rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-/* MAIN - Produtos */
-.produtos-content {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(150px, 1fr));
-  gap: 0.7rem;
-  padding: 0.7rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex: 1;
+  fill: var(--rating-star);
 }
 
 .card {
-  background-color: #e0e0e0;
-  padding: 0.6rem;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
+  background-color: var(--bg-card);
+  box-shadow: 0 2px 8px var(--card-shadow);
 }
 
 .image {
-  position: relative;
-  width: 100%;
-  height: 60%;
-  aspect-ratio: 1;
-  padding: 0.7rem;
-  background-color: #ffffff;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: contain;
-  mix-blend-mode: darken;
-}
-
-.card-info {
-  text-align: left;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.name {
-  flex: 1;
-  overflow: hidden;
-}
-
-.rate {
-  margin: 0.2rem 0;
-}
-
-.card-footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #ddd;
-  padding-top: 0.5rem;
-}
-
-.text-title {
-  font-weight: 700;
-  font-size: 1em;
-  line-height: 1.5;
+  background-color: #fafafa;
 }
 
 .card-button {
-  border: 1px solid #252525;
-  padding: 0.3em 0.6em;
-  cursor: pointer;
-  border-radius: 50px;
-  transition: all 0.3s ease;
+  color: var(--text-light);
 }
 
-.card-button:hover {
-  border-color: #ffcaa6;
-  background-color: #ffcaa6;
+.card-button svg {
+  fill: var(--text-primary);
 }
 
-/* Sistema de Avaliação */
-.rating {
-  display: inline-flex;
-  flex-direction: row-reverse;
-  gap: 2px;
-}
-
-.rating .input {
-  display: none;
+.card-button svg:hover {
+  fill: var(--accent-hover);
 }
 
 .rating .label {
-  cursor: pointer;
-  color: #ccc;
-  transition: color 0.3s;
+  color: var(--rating-star);
 }
 
-.rating .label:before {
-  content: "\2605";
-  font-size: 25px;
-}
-
-.rating .input:checked ~ .label,
-.rating .label:hover,
-.rating .label:hover ~ .label {
-  color: #ffeb49;
-}
-
-/* Footer */
 footer {
-  background-color: #e0e0e0;
-  padding: 0.5rem;
-  text-align: center;
-  margin-top: auto;
+  background-color: var(--footer-bg);
+  color: var(--text-secondary);
 }
 
-footer h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+.search input {
+  border: 1px solid var(--search-border);
+  background-color: var(--bg-card);
 }
 
-footer > p {
-  font-weight: 700;
-}
-
-address {
-  margin-top: 0.3rem;
-  font-style: italic;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.3rem;
-}
-
-address > * {
-  text-align: left;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem;
-  }
-
-  header h1 {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-
-  header .nav-content {
-    width: 100%;
-  }
-
-  .produtos-content {
-    grid-template-columns: repeat(2, minmax(130px, 1fr));
-  }
-}
-
-@media (max-width: 480px) {
-  .produtos-content {
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-  }
-
-  .card {
-    padding: 0.5rem;
-  }
+i {
+  color: var(--text-light);
 }
