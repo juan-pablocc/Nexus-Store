@@ -12,29 +12,27 @@
 body {
   background-color: #fdfdfd;
   /* background-color: #042940; */
-
   height: auto;
   display: flex;
-  align-items: center;
-  text-align: center;
   flex-direction: column;
 }
 
 /* HEADER */
 header {
   background-color: aqua;
-  max-height: 10vh;
+  max-height: 15vh;
+  height: auto;
   display: flex;
   align-items: center;
-  padding: 7px;
+  padding: 0.7rem;
+  justify-content: space-between;
 }
 
 header h1 {
   max-width: 30%;
   font-family: "Audiowide", sans-serif;
   font-weight: 500;
-  font-style: normal;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 header .icons,
@@ -50,7 +48,7 @@ header .nav-content {
 
 header .shop-cart {
   color: #000;
-  margin-left: 10px;
+  margin-left: 1.3rem;
   font-size: 22px;
   text-decoration: none;
 }
@@ -78,15 +76,17 @@ header .search {
 }
 
 header .search input {
-  min-width: 90%;
+  min-width: 80%;
   border-radius: 25px;
+  padding: 0.2rem 0.3rem;
+  font-size: 10px;
 }
 
 header .search button {
   border-radius: 50%;
   height: 1.7rem;
   width: 1.7rem;
-  font-size: 17px;
+  font-size: 1rem;
   border: none;
   background: none;
 }
@@ -95,7 +95,7 @@ header .search button {
 
 footer {
   background-color: #e0e0e0;
-  max-height: 17vh;
+  max-height: auto;
   padding: 0.5rem;
   text-align: center;
   font-size: 0.6rem;
@@ -124,23 +124,23 @@ footer > p {
 /* MAIN - Produtos */
 .produtos-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 7px;
+  grid-template-columns: repeat(6, minmax(150px, 1fr));
   padding: 7px;
   width: 100%;
 }
 
 .card {
-  max-width: 150px;
+  max-width: 97%;
   height: 100%;
+  width: 100%;
   max-height: 310px;
   background-color: #e0e0e0;
   padding: 0.6rem;
-  margin: 5px 3px;
+  margin: 4px 0;
+  gap: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: Arial, sans-serif;
-  overflow: visible;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
@@ -254,4 +254,10 @@ svg {
 .rating .label:hover,
 .rating .label:hover ~ .label {
   transition: color 0.3s;
+}
+
+@media only screen and (max-width: 480px) {
+  .produtos-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
