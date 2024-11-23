@@ -45,26 +45,20 @@ header .nav-content {
 }
 
 header .shop-cart {
-  margin-left: 1.3rem;
-  font-size: 22px;
-  text-decoration: none;
+  font-size: 25px;
+  margin-right: 0.4rem;
 }
 
-.favs .container-favs {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  user-select: none;
-  margin-left: 10px;
-}
-
-.container-favs svg {
-  width: 37px;
-  height: 37px;
-}
-
-.container-favs input[type="checkbox"] {
-  display: none;
+header .quantity {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 4px;
+  left: 94%;
+  padding: 1px 6px;
+  font-size: 10px;
 }
 
 header .search {

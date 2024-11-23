@@ -82,3 +82,8 @@ footer {
 i {
   color: var(--text-light);
 }
+
+header .quantity {
+  background: var(--cart-badge);
+  color: var(--text-light);
+}
