@@ -7,6 +7,7 @@
   --bg-primary: #f8f9fa; /* Branco off-white - fundo principal */
   --bg-secondary: #edf2f4; /* Cinza muito claro - fundo secundário */
   --bg-card: #ffffff; /* Branco puro - fundo dos cards */
+  --bg-car: #1a1a1d;
 
   /* Cores de texto */
   --text-primary: #2b2d42; /* Azul escuro - texto principal */
@@ -86,4 +87,17 @@ i {
 header .quantity {
   background: var(--cart-badge);
   color: var(--text-light);
+}
+
+.produto-view {
+  background-color: var(--footer-bg);
+}
+
+.shopcar-content {
+  background-color: var(--bg-car);
+  color: var(--text-light);
+}
+
+.shopcar-content span i {
+  color: var(--cart-badge);
 }

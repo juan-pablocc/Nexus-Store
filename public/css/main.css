@@ -238,6 +238,54 @@ svg {
   font-size: 25px;
 }
 
+/* Produto-view */
+.produto-view {
+  width: 93%;
+  height: 93%;
+  position: absolute;
+  align-self: center;
+  margin-top: 5vh;
+  border-radius: 7px;
+}
+
+/* Card-Content */
+.shopcar-content {
+  width: 60%;
+  height: 100vh;
+  display: none;
+  right: 0;
+  position: fixed;
+  justify-content: center;
+  border-radius: 3px 0 0 3px;
+  z-index: 100;
+}
+
+.shopcar-content .title {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.shopcar-content span {
+  display: flex;
+  top: 7px;
+  left: 7px;
+  font-size: 14px;
+  position: absolute;
+}
+
+.desactive {
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
 @media only screen and (max-width: 480px) {
   .produtos-content {
     grid-template-columns: repeat(2, 1fr);
