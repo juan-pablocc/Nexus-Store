@@ -99,5 +99,11 @@ header .quantity {
 }
 
 .shopcar-content span i {
-  color: var(--cart-badge);
+  color: var(--text-light);
+}
+
+#fim-compra {
+  background: #d2d2d2;
+  background-image: linear-gradient(to bottom, #d2d2d2, #c2c2c2);
+  color: #2b2d42;
 }
