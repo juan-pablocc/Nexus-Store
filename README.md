@@ -48,7 +48,7 @@ Se você tiver dúvidas, sugestões ou quiser entrar em contato sobre o projeto,
 <p align="center">
   <a href="mailto: jp995465@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
   <a href="https://github.com/juan-pablocc"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://www.instagram.com/_juancpablo/profilecard/?igsh=MWhuYWw2cG1td3hhZw%3D%3D"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
+  <a href="https://www.instagram.com/_juancpablo"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
   <a href="https://x.com/JuanPab_16?t=5_bbqDmbn7VNoS6SK8_SZA&s=09"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" /></a>
 </p>
 
