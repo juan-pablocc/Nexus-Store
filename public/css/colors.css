@@ -107,3 +107,11 @@ header .quantity {
   background-image: linear-gradient(to bottom, #d2d2d2, #c2c2c2);
   color: #2b2d42;
 }
+
+.pedido-img {
+  background-color: #fafafa;
+}
+
+.pedido .pedido-content #quantity {
+  background: var(--bg-secondary);
+}

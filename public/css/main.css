@@ -182,6 +182,8 @@ svg {
   cursor: pointer;
   border-radius: 50px;
   transition: 0.3s ease-in-out;
+  border: none;
+  background: none;
 }
 
 .card-button svg {
@@ -255,8 +257,9 @@ svg {
 
 .shopcar-content .title {
   width: 100%;
-  height: 5vh;
-  padding: 10px;
+  height: 7vh;
+  padding: 7px;
+  border-bottom: #d2d2d2 solid 1px;
 }
 
 .shopcar-content span {
@@ -265,17 +268,17 @@ svg {
   left: 7px;
   font-size: 14px;
   position: absolute;
+  cursor: pointer;
 }
 
 /* Produto - Card-Content */
-
 /* Sale-infos */
 .sale-infos {
   height: auto;
   max-height: 25vh;
   width: 100%;
-  position: absolute;
   bottom: 0;
+  position: absolute;
   text-align: left;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -336,6 +339,75 @@ svg {
   position: relative;
 }
 
+/* Products-Sales */
+#products-sales {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  overflow: auto;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.pedido {
+  border: solid 1px #d2d2d2;
+  height: 20%;
+  width: 95%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 3px 6px;
+  margin: 3px;
+}
+
+.pedido .pedido-img {
+  width: 20%;
+  height: 95%;
+  display: flex;
+  justify-self: flex-start;
+  justify-content: center;
+  border-radius: 7px;
+  padding: 5px;
+  margin-right: 15px;
+}
+
+.pedido .pedido-img img {
+  width: auto;
+  height: auto;
+  mix-blend-mode: darken;
+}
+
+.pedido .pedido-content {
+  width: 100%;
+  height: auto;
+}
+
+.pedido .pedido-content #quantity {
+  width: 10%;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  float: right;
+  border-radius: 3px;
+  border: none;
+}
+
+.pedido .pedido-content p {
+  width: 40%;
+  position: relative;
+  display: flex;
+  float: left;
+}
+
+.pedido .pedido-content h4 {
+  text-align: left;
+  height: 27%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
 .desactive {
   display: none;
 }
@@ -348,6 +420,15 @@ svg {
   .produtos-content {
     grid-template-columns: repeat(2, 1fr);
   }
+  .pedido .pedido-img {
+    width: 50%;
+  }
+  .shopcar-content {
+    width: 70%;
+  }
+  .pedido .pedido-content #quantity {
+    width: 25%;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -356,5 +437,11 @@ svg {
   }
   .card {
     width: 90%;
+  }
+  .pedido .pedido-img {
+    width: 20%;
+  }
+  .shopcar-content {
+    width: 30%;
   }
 }
