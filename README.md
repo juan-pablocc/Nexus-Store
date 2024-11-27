@@ -11,11 +11,11 @@ Este repositório contém apenas a **parte frontend** do projeto, que foi constr
 
 ## Funcionalidades
 
-- **Exibição de Produtos**: Lista de produtos com nome, preço e descrição.
+- [x] **Exibição de Produtos**: Lista de produtos com nome, preço e descrição.
 - **Carrinho de Compras**: Adição e remoção de itens do carrinho.
-- **Visualização do Carrinho**: Exibe o conteúdo do carrinho e o valor total da compra.
+- [x] **Visualização do Carrinho**: Exibe o conteúdo do carrinho e o valor total da compra.
 - **Filtros e Categorias**: Filtros simples para exibir produtos por categoria ou preço (sem backend).
-- **Design Responsivo**: A interface se adapta a diferentes tamanhos de tela, garantindo uma boa experiência em dispositivos móveis e desktops.
+- [x] **Design Responsivo**: A interface se adapta a diferentes tamanhos de tela, garantindo uma boa experiência em dispositivos móveis e desktops.
 
 ---
 
