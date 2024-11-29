@@ -77,6 +77,7 @@ function displayProducts(data) {
   });
 
   const buttons = document.querySelectorAll("button.card-button");
+  const numberCart = document.querySelector("span.quantity");
   buttons.forEach((bt) => {
     bt.addEventListener("click", (e) => {
       const cardElement = e.target.closest(".card");
@@ -86,6 +87,7 @@ function displayProducts(data) {
         price: cardElement.querySelector(".card-footer > span").innerHTML,
       };
       cart.push(featuresCard);
+      numberCart.innerHTML = cart.length;
     });
   });
 }
@@ -95,6 +97,7 @@ document.getElementById("shop-car").addEventListener("click", () => {
   document.querySelector(".shopcar-content").classList.add("active");
 
   displayProductCart(cart);
+  displayValores();
 });
 
 function displayProductCart(cart) {
@@ -120,3 +123,30 @@ function displayProductCart(cart) {
     product_sales.innerHTML += item;
   });
 }
+
+function displayValores() {
+  const quantityInput = document.getElementById("quantity");
+  const valores = document.querySelectorAll("div.pedido-content > p");
+  const contentTotalValue = document.querySelector("p.total-produtos");
+  const contentFreteValue = document.querySelector("p.total-frete");
+  const contentTotalPageValue = document.querySelector("p.total-pagamento");
+
+  let soma = 0; // Inicializa a soma
+  let quantity = parseFloat(quantityInput.value);
+
+  valores.forEach((e) => {
+    const numericValue = parseFloat(e.textContent.replace(/[^\d.]/g, "")); // Extrai o valor numérico
+    soma += numericValue * quantity;
+  });
+
+  const frete = (soma * 0.1).toFixed(2); // Calcula 10% de frete e mantém 2 casas decimais
+  const total = (soma + parseFloat(frete)).toFixed(2); // Soma total e formata
+
+  // Atualiza os valores no DOM
+  contentTotalValue.innerHTML = soma.toFixed(2); // Exibe com duas casas decimais
+  contentFreteValue.innerHTML = frete;
+  contentTotalPageValue.innerHTML = total;
+}
+
+const quantityInput = document.getElementById("quantity");
+quantityInput.addEventListener("input", displayValores);
