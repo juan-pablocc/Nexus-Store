@@ -271,6 +271,37 @@ svg {
   cursor: pointer;
 }
 
+.quantity-container {
+  width: auto;
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-bottom: 4px;
+}
+
+.quantity-container input.quantity {
+  margin: 0 7px;
+  width: 20%;
+  font-size: 18px;
+  position: relative;
+  display: flex;
+  text-align: center;
+  float: right;
+  border-radius: 3px;
+  border: none;
+}
+
+.quantity-container button {
+  padding: 0 3px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.quantity-container button:focus {
+  outline: none;
+}
+
 /* Produto - Card-Content */
 /* Sale-infos */
 .sale-infos {
@@ -352,12 +383,12 @@ svg {
 
 .pedido {
   border: solid 1px #d2d2d2;
-  height: 20%;
+  height: 23%;
   width: 95%;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  padding: 3px 6px;
+  padding: 5px 6px;
   margin: 3px;
 }
 
@@ -381,17 +412,6 @@ svg {
 .pedido .pedido-content {
   width: 100%;
   height: auto;
-}
-
-.pedido .pedido-content #quantity {
-  width: 10%;
-  font-size: 18px;
-  text-align: center;
-  position: relative;
-  display: flex;
-  float: right;
-  border-radius: 3px;
-  border: none;
 }
 
 .pedido .pedido-content p {

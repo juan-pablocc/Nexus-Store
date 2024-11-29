@@ -115,3 +115,11 @@ header .quantity {
 .pedido .pedido-content #quantity {
   background: var(--bg-secondary);
 }
+
+.quantity-container button {
+  background-color: #f0f0f0;
+}
+
+.quantity-container button:focus {
+  background-color: #e0e0e0;
+}
