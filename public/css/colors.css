@@ -54,18 +54,6 @@ header {
   background-color: #fafafa;
 }
 
-.card-button {
-  color: var(--text-light);
-}
-
-.card-button svg {
-  fill: var(--text-primary);
-}
-
-.card-button svg:hover {
-  fill: var(--accent-hover);
-}
-
 .rating .label {
   color: var(--rating-star);
 }

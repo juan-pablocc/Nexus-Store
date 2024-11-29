@@ -37,13 +37,25 @@ function displayProducts(data) {
         <p class="text-title name">${features.title}</p>
         <div class="rate">
           <div class="rating">
-            <!-- Rating Inputs -->
+              <input type="radio" name="rating" id="star5" value="5" class="input" />
+              <label for="star5" class="star label"></label>
+
+              <input type="radio" name="rating" id="star4" value="4" class="input" />
+              <label for="star4" class="star label"></label>
+
+              <input type="radio" name="rating" id="star3" value="3" class="input" />
+              <label for="star3" class="star label"></label>
+
+              <input type="radio" name="rating" id="star2" value="2" class="input" />
+              <label for="star2" class="star label"></label>
+
+              <input type="radio" name="rating" id="star1" value="1" class="input" />
+              <label for="star1" class="star label"></label>
           </div>
         </div>
       </div>
       <div class="card-footer">
         <span class="text-title">$${features.price}</span>
-        <button class="card-button">Adicionar ao Carrinho</button>
       </div>
     </div>
     `;
@@ -75,6 +87,15 @@ function displayProducts(data) {
       numberCart.innerHTML = cart.length;
     });
   });
+
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      document.querySelector(".produto-view").classList.remove("desactive");
+      document.querySelector(".produto-view").classList.add("active");
+    });
+  });
 }
 
 document.getElementById("shop-car").addEventListener("click", () => {
@@ -91,8 +112,11 @@ function displayProductCart(cart) {
   // Limpar o carrinho antes de exibir novos itens
   product_sales.innerHTML = "";
 
-  cart.forEach((i) => {
-    const item = `
+  if (cart.length === 0) {
+    product_sales.innerHTML = `<p class="empty-cart-message">O carrinho está vazio</p>`;
+  } else {
+    cart.forEach((i, index) => {
+      const item = `
       <div class="pedido" data-id="${i.id}">
         <div class="pedido-img">
           <img src="${i.img}" alt="${i.title}" />
@@ -108,40 +132,39 @@ function displayProductCart(cart) {
         </div>
       </div>
     `;
-    product_sales.innerHTML += item;
-  });
-
-  // Atualizar a quantidade e remover itens
-  document.querySelectorAll(".btn-decrease").forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      const input = btn.closest(".pedido").querySelector(".quantity");
-      let newQuantity = Math.max(0, parseInt(input.value) - 1);
-      input.value = newQuantity;
-      cart[index].quantity = newQuantity;
-      console.log((cart[index].quantity = newQuantity));
-
-      // Se a quantidade for 0, remove o item do carrinho
-      if (newQuantity === 0) {
-        cart = cart.filter((item) => item.id !== cart[index].id);
-      }
-
-      console.log(cart);
-      displayValores();
-      updateCartNumber(cart);
+      product_sales.innerHTML += item;
     });
-  });
 
-  document.querySelectorAll(".btn-increase").forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      const input = btn.closest(".pedido").querySelector(".quantity");
-      let newQuantity = parseInt(input.value) + 1;
-      input.value = newQuantity;
-      cart[index].quantity = newQuantity;
+    // Atualizar a quantidade e remover itens
+    document.querySelectorAll(".btn-decrease").forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        const input = btn.closest(".pedido").querySelector(".quantity");
+        let newQuantity = Math.max(0, parseInt(input.value) - 1);
+        input.value = newQuantity;
+        cart[index].quantity = newQuantity;
 
-      console.log(cart);
-      displayValores();
+        // Se a quantidade for 0, remove o item do carrinho
+        if (newQuantity === 0) {
+          cart.splice(index, 1); // Remove o item do carrinho
+        }
+
+        displayValores();
+        updateCartNumber(cart);
+        displayProductCart(cart); // Reexibe o carrinho atualizado
+      });
     });
-  });
+
+    document.querySelectorAll(".btn-increase").forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        const input = btn.closest(".pedido").querySelector(".quantity");
+        let newQuantity = parseInt(input.value) + 1;
+        input.value = newQuantity;
+        cart[index].quantity = newQuantity;
+
+        displayValores();
+      });
+    });
+  }
 }
 
 function displayValores() {
@@ -152,21 +175,30 @@ function displayValores() {
   let soma = 0;
 
   cart.forEach((item) => {
-    const price = parseFloat(item.price.replace(/[^\d.]/g, ""));
+    const price = parsePrice(item.price); // Usar a função para tratar o preço
     soma += price * item.quantity;
   });
 
   const frete = (soma * 0.1).toFixed(2); // Calcula 10% de frete
   const total = (soma + parseFloat(frete)).toFixed(2);
 
-  contentTotalValue.innerHTML = soma.toFixed(2);
+  if (soma == 0) {
+    contentTotalValue.innerHTML = "0,00";
+  } else {
+    contentTotalValue.innerHTML = soma;
+  }
+
   contentFreteValue.innerHTML = frete;
   contentTotalPageValue.innerHTML = total;
+}
+
+// Função para tratar o preço, removendo caracteres não numéricos
+function parsePrice(price) {
+  return parseFloat(price.replace(/[^\d.]/g, ""));
 }
 
 // Função para atualizar o número de itens no carrinho
 function updateCartNumber(cart) {
   const numberCart = document.querySelector("span.quantity");
-  numberCart.innerHTML = "";
   numberCart.innerHTML = cart.length;
 }
